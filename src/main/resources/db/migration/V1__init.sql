@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS Peliculas (
+id SERIAL,
+titulo VARCHAR(100) NOT NULL,
+productor VARCHAR(100) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS Generos (
+id SERIAL,
+nombre VARCHAR(100) NOT NULL,
+ciudad VARCHAR(100) NOT NULL,
+Generos_id INT NOT NULL,
+PRIMARY KEY (id),
+FOREIGN KEY (Generos_id ) REFERENCES Generos(id)
+);
