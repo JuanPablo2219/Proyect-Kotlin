@@ -62,4 +62,8 @@ class PeliculasService {
             throw ResponseStatusException(HttpStatus.NOT_FOUND,ex.message)
         }
     }
+
+    fun listById (id:Long?):Pelicula?{
+        return peliculasRepository.findById(id)
+    }
 }

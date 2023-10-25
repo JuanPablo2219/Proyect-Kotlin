@@ -8,16 +8,17 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "Peliculas")
+@Table(name = "peliculas")
 class Pelicula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false)
     var id: Long? = null
 
-    @Column(name = "titulo")
     var titulo: String? = null
 
-    @Column(name = "productor")
     var productor: String? = null
+
+    @Column(name = "generos_id")
+    var generosId: Long? = null
 }

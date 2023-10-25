@@ -26,6 +26,11 @@ class PeliculasController {
         return peliculasService.list()
     }
 
+    @GetMapping("/{id}")
+    fun listById (@PathVariable("id") id: Long): ResponseEntity<*>{
+        return ResponseEntity(peliculasService.listById(id), HttpStatus.OK)
+    }
+
     @PostMapping
     fun save (@RequestBody pelicula: Pelicula):ResponseEntity<Pelicula>{
         return ResponseEntity(peliculasService.save(pelicula), HttpStatus.OK)
