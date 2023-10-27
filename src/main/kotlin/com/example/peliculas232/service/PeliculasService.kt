@@ -1,6 +1,7 @@
 package com.example.peliculas232.service
 
 import com.example.peliculas232.model.Pelicula
+import com.example.peliculas232.repository.GenerosRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
@@ -11,6 +12,9 @@ import com.example.peliculas232.repository.PeliculasRepository
 class PeliculasService {
     @Autowired
     lateinit var peliculasRepository: PeliculasRepository
+
+    @Autowired
+    lateinit var generosRepository: GenerosRepository
 
     fun list ():List<Pelicula>{
         return peliculasRepository.findAll()
