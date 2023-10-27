@@ -28,7 +28,7 @@ class PeliculasController {
 
     @GetMapping("/{id}")
     fun listById (@PathVariable("id") id: Long): ResponseEntity<*>{
-        return ResponseEntity(peliculasService.listById(id), HttpStatus.OK)
+        return ResponseEntity(peliculasService.listById (id), HttpStatus.OK)
     }
 
     @PostMapping
