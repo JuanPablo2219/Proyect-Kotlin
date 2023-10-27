@@ -22,6 +22,8 @@ class PeliculasService {
 
     fun save(pelicula: Pelicula): Pelicula {
         try{
+            generosRepository.findById(pelicula.generosId)
+                ?: throw Exception("Id del cliente no encontrada")
             return peliculasRepository.save(pelicula)
         }
         catch (ex:Exception){
