@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2e5c13b4-b2ca-4eaf-b462-af97002d9100",
+		"_postman_id": "0ade3b9a-72f5-471b-8ee5-9d2251566a30",
 		"name": "Consultas Generos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30579600"
@@ -52,7 +52,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Anime\",\r\n    \"ciudad\": \"Japon\"\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Anime\",\r\n    \"ciudad\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,7 +80,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\":\"1\",\r\n        \"nombre\": \"Miedo\",\r\n        \"ciudad\": \"Los Angeles\"\r\n    }",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Terror\",\r\n    \"ciudad\": \"New York\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -108,7 +108,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": 2,\r\n        \"nombre\": \"Comedia\",\r\n        \"ciudad\": \"New York\"\r\n}",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Anime\",\r\n    \"ciudad\": \"Japon\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/generos/generos/3",
+					"raw": "http://localhost:8081/generos/generos/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -144,7 +144,7 @@
 					"path": [
 						"generos",
 						"generos",
-						"3"
+						"4"
 					]
 				}
 			},

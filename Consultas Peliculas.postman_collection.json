@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ac7c3646-4ee5-4d8b-b42d-c95aa78c22ea",
+		"_postman_id": "5d852946-387c-43d6-bd6b-27cc5431c735",
 		"name": "Consultas Peliculas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30579600"
@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\":\"¿ Que Paso Ayer ?\",\r\n    \"productor\":\"Ed Helms\",\r\n    \"generosId\":2\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Dragon Ball Z\",\r\n    \"productor\": null,\r\n    \"generosId\":2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

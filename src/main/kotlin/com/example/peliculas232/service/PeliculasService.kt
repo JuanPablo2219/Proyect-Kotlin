@@ -22,12 +22,16 @@ class PeliculasService {
 
     fun save(pelicula: Pelicula): Pelicula {
         try{
+            pelicula.titulo?.takeIf { it.trim().isNotEmpty() }
+                ?: throw Exception("Titulo no debe ser vacio")
+            pelicula.productor?.takeIf { it.trim().isNotEmpty() }
+                ?: throw Exception("Productor no debe ser vacio")
             generosRepository.findById(pelicula.generosId)
                 ?: throw Exception("Id del cliente no encontrada")
             return peliculasRepository.save(pelicula)
         }
         catch (ex:Exception){
-            throw ResponseStatusException(HttpStatus.NOT_FOUND,ex.message)
+            throw ResponseStatusException(HttpStatus.BAD_REQUEST,ex.message)
         }
     }
 
